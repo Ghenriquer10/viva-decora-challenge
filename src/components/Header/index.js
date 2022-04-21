@@ -10,9 +10,18 @@ export default function Header(){
                 <img src={logo} alt="imagem com a logo da empresa chamada viva decora"/>
             </div>
             <div className='menu'>
-                <NavLink to="/" className={({ isActive }) => (isActive ? "link-active" : "link")}>Menu</NavLink>
-                <NavLink to="/likedMovies" className={({ isActive }) => (isActive ? "link-active" : "link")}>Filmes curtidos</NavLink>
-                <NavLink to="/unlikedMovies" className={({ isActive }) => (isActive ? "link-active" : "link")}>Filmes não curtidos</NavLink>
+                
+                <NavLink to="/" className={({ isActive }) => (isActive ? "link-active" : "link")}>
+                    Filmes não curados
+                </NavLink>
+
+                <NavLink to="/likedMovies" className={({ isActive }) => (isActive ? "link-active" : "link")}>
+                    Filmes curtidos
+                </NavLink>
+
+                <NavLink to="/unlikedMovies" className={({ isActive }) => (isActive ? "link-active" : "link")}>
+                    Filmes não curtidos
+                </NavLink>
             </div>
         </C.Container>
     )

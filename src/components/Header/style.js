@@ -6,38 +6,47 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
     color: white;
-    background-color: red;
     background-color: rgba(225, 225, 225, 0.5);
-
-    nav {
-        height: 56px;
+    
+    .logo{
+        height: 50%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #3f51b5;
-        box-shadow: 0 5px 10px #ccc;
+    
+        img{
+            height: 300px;
+            width: 300px;
+        }
     }
-
-    /* Basic styles for nav links */
-    nav a {
+    
+    .menu{
+        height: 50%;
+        width: 50%;
         display: flex;
+        justify-content: space-around;
         align-items: center;
-        padding-left: 30px;
-        padding-right: 30px;
-        height: 100%;
-        text-decoration: none;
     }
 
+    .menu a{
+        text-transform: uppercase;
+        font-family: monospace;
+        font-size: 1.2em;
+        padding: 10px;
+    }
+      
     /* Specific styles for non-active links */
     .link {
         color: white;
     }
-
+    
     /* Specific styles for active links */
     .link-active {
-        color: black;
-        background: orange;
+        color: white;
+        border-bottom: 3px solid white;
     }
 
     .content {
@@ -45,25 +54,5 @@ export const Container = styled.div`
         text-align: center;
     }
 
-    .logo{
-        height: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        img{
-            height: 300px;
-            width: 300px;
-        }
-    }
-
-    .menu{
-        height: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
 `;
