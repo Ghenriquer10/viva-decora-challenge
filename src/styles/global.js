@@ -12,12 +12,12 @@ export default createGlobalStyle`
 
     html, body, #root{
         height: 100%;
-        overflow-y: hidden;
+        background-color: rgba(255, 86, 86, 0.6);
     }
 
     body{
         background-image: url(${logan_bg});
-        background-size: cover;
+        background-size: 100% 100%;
     }
 
     ul{

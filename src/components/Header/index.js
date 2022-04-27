@@ -1,6 +1,6 @@
 import React from 'react'
 import * as C from './style'
-import logo from '../../assets/logos/vivadecora-logo-simples-novo.svg'
+import logo from '../../assets/logos/vivadecora.png'
 import {NavLink} from 'react-router-dom'
 
 export default function Header(){

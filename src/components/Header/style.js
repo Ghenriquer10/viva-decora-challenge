@@ -8,7 +8,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     color: white;
-    background-color: rgba(225, 225, 225, 0.5);
+    background-color: rgba(ff5656, 0, 0, 1);
     
     .logo{
         height: 50%;
@@ -18,8 +18,8 @@ export const Container = styled.div`
         align-items: center;
     
         img{
-            height: 300px;
-            width: 300px;
+            height: 53px;
+            width: 203px;
         }
     }
     
