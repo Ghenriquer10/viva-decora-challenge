@@ -11,15 +11,15 @@ export const Container = styled.div`
     background-color: rgba(ff5656, 0, 0, 1);
     
     .logo{
-        height: 50%;
+        height: 90%;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     
         img{
-            height: 53px;
-            width: 203px;
+            height: 38px;
+            width: 165px;
         }
     }
     
@@ -35,22 +35,21 @@ export const Container = styled.div`
         text-transform: uppercase;
         font-family: monospace;
         font-size: 1.2em;
-        padding: 10px;
     }
       
     /* Specific styles for non-active links */
     .link {
         color: white;
+        opacity: 0.6;
     }
     
     /* Specific styles for active links */
     .link-active {
         color: white;
-        border-bottom: 3px solid white;
+        border-bottom: 5px solid white;
     }
 
     .content {
-        margin-top: 50px;
         text-align: center;
     }
 

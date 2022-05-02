@@ -42,14 +42,22 @@ export default function Home(){
                                     </div>
                                 </div>
                                 <div className='movie-sinopse'>
-                                    Sinopse movie
+                                    <p>{(movies[index].overview).slice(0, 90)}...<button><a href='*'>Sinopse</a></button></p>
                                 </div>
                             </C.About>
                         </C.Card>
-                        <button onClick={nextMovie}>Next</button>
+                        <C.Buttons>
+                            <button className='choose-liked'>Não curti!</button>
+                            <button className='next' onClick={nextMovie}>Pular</button>
+                            <button className='choose-liked'>Curti!</button>
+                        </C.Buttons>
                     </C.CardContainer>
                 </C.Container> :
-                <div><h1>Não há filmes</h1></div>
+                <C.EmptyMovie>
+                    <div>
+                        <h1>Não há filmes</h1>
+                    </div>
+                </C.EmptyMovie>
             }  
         </>
     )
