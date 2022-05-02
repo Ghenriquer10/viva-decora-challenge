@@ -30,6 +30,8 @@ export const About = styled.div`
     width: 100%;
     margin-top: auto;
     padding: 20px;
+    margin-bottom: 30px;
+
     
     
     
@@ -37,6 +39,7 @@ export const About = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
+        border: 1px solid white;
     }
     
     .movie-tittle{
@@ -47,14 +50,16 @@ export const About = styled.div`
         flex-direction: column;
         padding: 10px;
         max-height: 100px;
+        border: 1px solid white;
         
         h1{
             text-transform: uppercase;
             font-weight: bold;
+            font-family: sans-serif;
         }
         
         p{
-            
+            border: 1px solid white;
         }
     }
     
@@ -64,6 +69,7 @@ export const About = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        border: 1px solid white;
     }
     
     .movie-sinopse{
@@ -71,7 +77,9 @@ export const About = styled.div`
         height: 60px;
         display: flex;
         align-items: center;
-
+        padding: 10px;
+        border: 1px solid white;
+        
         p{
             text-overflow: ellipsis;
             overflow: hidden;
@@ -91,19 +99,39 @@ export const Buttons = styled.div`
         border: none;
         height: 50px;
         border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        
+        
+        img{
+            height: 25px;
+            width: 25px;
+            margin-right: 2px;
+        }
+        
+        p{
+            margin-top: 5px;
+            margin-left: 2px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+
+    button:nth-child(3){
+        color: red;
+    }
+
+    button:nth-child(2){
+        width: 80px;
     }
 
     button:nth-child(odd){
         width: 150px;
         margin: 0 100px;
     }
-
-    button:nth-child(2){
-        width: 80px;
-    }
-  
-
-
     
   
 `;

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import api from '../../services/api'
 import * as C from './style'
+import liked from '../../assets/liked.png'
+import unliked from '../../assets/unliked.png'
 
 
 export default function Home(){
@@ -35,7 +37,7 @@ export default function Home(){
                                 <div className='movie-about'>
                                     <div className='movie-tittle'>
                                         <h1>{movies[index].original_title}</h1>
-                                        <p>Ola</p>
+                                        <p>{(movies[index].release_date).slice(0, 4)} - </p>
                                     </div>
                                     <div className='movie-rating'>
                                         <p>Five stars</p>
@@ -47,9 +49,9 @@ export default function Home(){
                             </C.About>
                         </C.Card>
                         <C.Buttons>
-                            <button className='choose-liked'>Não curti!</button>
-                            <button className='next' onClick={nextMovie}>Pular</button>
-                            <button className='choose-liked'>Curti!</button>
+                            <button className='choose-liked'><img src={unliked} alt='imagem de dedo para baixo'/><p>Não curti!</p></button>
+                            <button className='next' onClick={nextMovie}><p>Pular</p></button>
+                            <button className='choose-liked'><img src={liked} alt='imiagem de dedo para cima'/><p>Curti!</p></button>
                         </C.Buttons>
                     </C.CardContainer>
                 </C.Container> :
