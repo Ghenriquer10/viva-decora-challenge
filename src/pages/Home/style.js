@@ -11,7 +11,8 @@ export const CardContainer = styled.div`
     flex-direction: column;
     display: flex;
     margin-top: -30px;
-    `;
+    
+`;
 
 export const Card = styled.div`
     height: 460px;
@@ -20,46 +21,48 @@ export const Card = styled.div`
     background-repeat: no-repeat;
     margin-top: 50px;
     border-radius: 5px;
-    display: flex;
     color: #FFF;
-
+    display: flex;
+    
+    .gradient-effect{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        background: rgb(253,253,255);
+        background: linear-gradient(0deg, rgba(253,253,255,0.31726193895526966) 39%, rgba(255,255,255,0) 100%);
+    }
 `;
 
 export const About = styled.div`
     height: 150px;
     width: 100%;
     margin-top: auto;
-    padding: 20px;
-    margin-bottom: 30px;
-
-    
+    padding: 30px;
     
     
     .movie-about{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border: 1px solid white;
     }
     
     .movie-tittle{
-        height: 100%;
+        height: 60px;
         width: 80%;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-        padding: 10px;
-        max-height: 100px;
-        border: 1px solid white;
+        justify-content: space-between;
+        text-transform: uppercase;
         
-        h1{
+        h2{
             text-transform: uppercase;
             font-weight: bold;
             font-family: sans-serif;
         }
         
         p{
-            border: 1px solid white;
+            font-size: 0.9em;
         }
     }
     
@@ -69,20 +72,33 @@ export const About = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid white;
+        flex-direction: column;
+
+        .movie-heart{
+            color: rgba(255, 86, 86, 0.9);
+        }
+
+        p:nth-child(2){
+            font-size: 0.8em;
+        }
     }
     
     .movie-sinopse{
         width: 100%;
-        height: 60px;
+        height: 40px;
         display: flex;
         align-items: center;
-        padding: 10px;
-        border: 1px solid white;
         
         p{
             text-overflow: ellipsis;
             overflow: hidden;
+        }
+
+        button{
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+            color: red;
+            font-size: 1.1em;
         }
     }
 `;
@@ -131,6 +147,11 @@ export const Buttons = styled.div`
     button:nth-child(odd){
         width: 150px;
         margin: 0 100px;
+    }
+
+    button:hover{
+        transition: 1s all;
+        transform: scale(1.1)
     }
     
   

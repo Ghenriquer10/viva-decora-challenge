@@ -20,6 +20,10 @@ export default createGlobalStyle`
         background-size: 100% 100%;
     }
 
+    button{
+        cursor: pointer;
+    }
+
     ul{
         list-style-type: none;
     }

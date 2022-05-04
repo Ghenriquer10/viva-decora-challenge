@@ -4,6 +4,7 @@ import * as C from './style'
 import liked from '../../assets/liked.png'
 import unliked from '../../assets/unliked.png'
 import apiGenres from '../../services/apiGenres'
+import {AiFillHeart} from 'react-icons/ai'
 
 
 export default function Home(){
@@ -36,9 +37,22 @@ export default function Home(){
     }
 
     function generosFunc(generos){
-        const genresArray = Object.entries(genres);
-        console.log(genresArray);
-    }
+        function filterArray(array, fields, value) {
+            array = array.filter((item) => {
+                const found = fields.every((field, index) => { 
+                    return item[field] && item[field] === value[index]
+                })
+                return found
+            });
+            return array;
+        }
+        const movieGenres = filterArray(genres, ['id'], generos);
+        return movieGenres[0].name;
+   }
+
+   function movieDetails(){
+       alert("detalhes do filme")
+   }
 
     return(
         <>
@@ -46,20 +60,26 @@ export default function Home(){
                 <C.Container>
                     <C.CardContainer>
                         <C.Card style={{backgroundImage: `url(${imageBaseUrl + movies[index].backdrop_path})`}}>
-                            <C.About>
-                                <div className='movie-about'>
-                                    <div className='movie-tittle'>
-                                        <h1>{movies[index].original_title}</h1>
-                                        <p>{(movies[index].release_date).slice(0, 4)} - {generosFunc(movies[index].genre_ids)}</p>
+                            <div className='gradient-effect'>
+                                <C.About>
+                                    <div className='movie-about'>
+                                        <div className='movie-tittle'>
+                                            <h2>{movies[index].title}</h2>
+                                            <p>Ano: {(movies[index].release_date).slice(0, 4)} - Genêro: {movies && genres ? generosFunc(movies[index].genre_ids) : null}</p>
+                                        </div>
+                                        <div className='movie-rating'>
+                                            <div className='movie-heart'>
+                                                <AiFillHeart size={25}/><AiFillHeart size={25}/><AiFillHeart size={25}/><AiFillHeart size={25}/><AiFillHeart size={25}/>
+                                            </div>
+                                            <p>({movies[index].vote_count} avaliações)</p>
+                                        </div>
                                     </div>
-                                    <div className='movie-rating'>
-                                        <p>Five stars</p>
+                                    <div className='movie-sinopse'>
+                                        <p>{movies[index].overview === '' ? "Filme não contém sinopse." : (movies[index].overview).slice(0, 60) + "... "}
+                                        {movies[index].overview === '' ? null : <button onClick={movieDetails}>Ver sinopse</button>}</p>
                                     </div>
-                                </div>
-                                <div className='movie-sinopse'>
-                                    <p>{(movies[index].overview).slice(0, 90)}...<button><a href='*'>Sinopse</a></button></p>
-                                </div>
-                            </C.About>
+                                </C.About>
+                            </div>
                         </C.Card>
                         <C.Buttons>
                             <button className='choose-liked'><img src={unliked} alt='imagem de dedo para baixo'/><p>Não curti!</p></button>
@@ -70,7 +90,7 @@ export default function Home(){
                 </C.Container> :
                 <C.EmptyMovie>
                     <div>
-                        <h1>Não há filmes</h1>
+                        <h1>Buscando filmes...</h1>
                     </div>
                 </C.EmptyMovie>
             }  
