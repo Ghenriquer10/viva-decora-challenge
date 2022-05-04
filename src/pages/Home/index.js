@@ -5,6 +5,7 @@ import liked from '../../assets/liked.png'
 import unliked from '../../assets/unliked.png'
 import apiGenres from '../../services/apiGenres'
 import {AiFillHeart} from 'react-icons/ai'
+import { MovieDetail } from '../../components/MovieDetail'
 
 
 export default function Home(){
@@ -12,6 +13,7 @@ export default function Home(){
     const [index, setIndex] = useState(0)
     const [movies, setMovies] = useState('');
     const [genres, setGenres] = useState('');
+    const [movieDetail, setMovieDetail] = useState(false);
 
     useEffect(() => {
         async function loadMovies(){
@@ -50,14 +52,18 @@ export default function Home(){
         return movieGenres[0].name;
    }
 
-   function movieDetails(){
-       alert("detalhes do filme")
+   function handleMovieDetail(){
+       setMovieDetail(prev => !prev)
    }
 
     return(
         <>
             {movies ?
                 <C.Container>
+                    <MovieDetail
+                        movieDetail={movieDetail}
+                        setMovieDetail={setMovieDetail}
+                    />
                     <C.CardContainer>
                         <C.Card style={{backgroundImage: `url(${imageBaseUrl + movies[index].backdrop_path})`}}>
                             <div className='gradient-effect'>
@@ -76,7 +82,7 @@ export default function Home(){
                                     </div>
                                     <div className='movie-sinopse'>
                                         <p>{movies[index].overview === '' ? "Filme não contém sinopse." : (movies[index].overview).slice(0, 60) + "... "}
-                                        {movies[index].overview === '' ? null : <button onClick={movieDetails}>Ver sinopse</button>}</p>
+                                        {movies[index].overview === '' ? null : <button onClick={handleMovieDetail}>Ver sinopse</button>}</p>
                                     </div>
                                 </C.About>
                             </div>
