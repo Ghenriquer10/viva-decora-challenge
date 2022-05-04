@@ -20,5 +20,6 @@ export const MovieDetailWrapper = styled.div`
     color: #000;
     z-index: 10;
     border-radius: 10px;
-    background-color: #1F1C1B;
+    background-color: #fff;
+    margin-top: 70px;
 `;

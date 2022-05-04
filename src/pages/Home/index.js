@@ -63,6 +63,7 @@ export default function Home(){
                     <MovieDetail
                         movieDetail={movieDetail}
                         setMovieDetail={setMovieDetail}
+                        movieIndex = {index}
                     />
                     <C.CardContainer>
                         <C.Card style={{backgroundImage: `url(${imageBaseUrl + movies[index].backdrop_path})`}}>

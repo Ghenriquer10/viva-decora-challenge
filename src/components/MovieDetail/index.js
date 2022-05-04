@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 import {animated, useSpring} from 'react-spring'
 import * as C from './style';
 
-export const MovieDetail = ({movieDetail, setMovieDetail}) => {
+export const MovieDetail = ({movieDetail, setMovieDetail, index}) => {
     
     const detailRef = useRef();
 
@@ -19,6 +19,10 @@ export const MovieDetail = ({movieDetail, setMovieDetail}) => {
               setMovieDetail(false)
           }
       }
+
+      function handleMovie(){
+          console.log(index)
+      }
     return(
         <>
             {movieDetail ? 
@@ -26,6 +30,7 @@ export const MovieDetail = ({movieDetail, setMovieDetail}) => {
                     <animated.div style={animation}>
                         <C.MovieDetailWrapper>
                             <h1>Olá</h1>
+                            <button onClick={handleMovie}>Alo</button>
                         </C.MovieDetailWrapper>
                     </animated.div>
                 </C.Container>)
