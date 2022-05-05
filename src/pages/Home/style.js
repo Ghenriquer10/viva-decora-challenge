@@ -78,6 +78,10 @@ export const About = styled.div`
             color: rgba(255, 86, 86, 0.9);
         }
 
+        svg:nth-child(5){
+            color: #fff;
+        }
+
         p:nth-child(2){
             font-size: 0.8em;
         }

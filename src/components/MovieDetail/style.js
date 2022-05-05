@@ -10,7 +10,7 @@ export const Container = styled.div`
     align-items: center;
     z-index: 10;
     top: 0;
-`;
+    `;
 
 export const MovieDetailWrapper = styled.div`
     height: 470px;
@@ -22,4 +22,27 @@ export const MovieDetailWrapper = styled.div`
     border-radius: 10px;
     background-color: #fff;
     margin-top: 70px;
+    `;
+
+export const CardDetail = styled.div`
+    width: 100%;
+    height: 100%;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 80%, rgba(255, 86, 86, 1) 80%);    
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .image-sinopse{
+        height: 120px;
+        width: 100px;
+        margin-top: 30px;
+
+        img{
+            height: 120px;
+            width: 100px;
+        }
+    }
 `;
+

@@ -4,15 +4,15 @@ import * as C from './style'
 import liked from '../../assets/liked.png'
 import unliked from '../../assets/unliked.png'
 import apiGenres from '../../services/apiGenres'
-import {AiFillHeart} from 'react-icons/ai'
+import {AiFillHeart, AiOutlineHeart} from 'react-icons/ai'
 import { MovieDetail } from '../../components/MovieDetail'
 
 
 export default function Home(){
     const imageBaseUrl = process.env.REACT_APP_IMAGEBASE
     const [index, setIndex] = useState(0)
-    const [movies, setMovies] = useState('');
-    const [genres, setGenres] = useState('');
+    const [movies, setMovies] = useState();
+    const [genres, setGenres] = useState();
     const [movieDetail, setMovieDetail] = useState(false);
 
     useEffect(() => {
@@ -63,7 +63,8 @@ export default function Home(){
                     <MovieDetail
                         movieDetail={movieDetail}
                         setMovieDetail={setMovieDetail}
-                        movieIndex = {index}
+                        index = {index}
+                        movies={movies}
                     />
                     <C.CardContainer>
                         <C.Card style={{backgroundImage: `url(${imageBaseUrl + movies[index].backdrop_path})`}}>
@@ -76,7 +77,7 @@ export default function Home(){
                                         </div>
                                         <div className='movie-rating'>
                                             <div className='movie-heart'>
-                                                <AiFillHeart size={25}/><AiFillHeart size={25}/><AiFillHeart size={25}/><AiFillHeart size={25}/><AiFillHeart size={25}/>
+                                                <AiFillHeart size={25}/><AiFillHeart size={25}/><AiFillHeart size={25}/><AiFillHeart size={25}/><AiOutlineHeart size={25}/>
                                             </div>
                                             <p>({movies[index].vote_count} avaliações)</p>
                                         </div>

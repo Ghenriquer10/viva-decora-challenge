@@ -2,9 +2,11 @@ import React, {useRef} from 'react';
 import {animated, useSpring} from 'react-spring'
 import * as C from './style';
 
-export const MovieDetail = ({movieDetail, setMovieDetail, index}) => {
+export const MovieDetail = ({movieDetail, setMovieDetail, index, movies}) => {
     
     const detailRef = useRef();
+
+    const imageBaseUrl = process.env.REACT_APP_IMAGEBASE
 
     const animation = useSpring({
         config: {
@@ -19,18 +21,18 @@ export const MovieDetail = ({movieDetail, setMovieDetail, index}) => {
               setMovieDetail(false)
           }
       }
-
-      function handleMovie(){
-          console.log(index)
-      }
     return(
         <>
             {movieDetail ? 
                 (<C.Container onClick={closeMovieDetail} ref={detailRef} >
                     <animated.div style={animation}>
                         <C.MovieDetailWrapper>
-                            <h1>Olá</h1>
-                            <button onClick={handleMovie}>Alo</button>
+                            <C.CardDetail>
+                                <div className='image-sinopse'><img src={imageBaseUrl + movies[index].poster_path} alt="Imagem poster do filme"/></div>
+                                <div>Nome e Detalhe</div>
+                                <div>Rating</div>
+                                <div>Sinopse</div>
+                            </C.CardDetail>
                         </C.MovieDetailWrapper>
                     </animated.div>
                 </C.Container>)
