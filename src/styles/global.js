@@ -13,6 +13,7 @@ export default createGlobalStyle`
     html, body, #root{
         height: 100%;
         background-color: rgba(255, 86, 86, 0.9);
+        font-family: monospace;
     }
 
     body{

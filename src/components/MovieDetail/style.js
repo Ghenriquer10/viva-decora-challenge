@@ -33,16 +33,62 @@ export const CardDetail = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 0 60px;
 
-    .image-sinopse{
-        height: 120px;
-        width: 100px;
-        margin-top: 30px;
-
+    
+    .image-movie{
+        height: 140px;
+        width: 120px;
+        margin-top: 20px;
+        
         img{
-            height: 120px;
-            width: 100px;
+            height: 140px;
+            width: 120px;
         }
+    }
+    
+    .tittle-movie{
+        margin-top: 10px;
+        h1{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.5em;
+        }
+    }
+
+    .release-movie{
+        margin-top: 10px;
+
+        p{
+            color: grey;
+        }
+    }
+    
+    .movie-heart{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: rgba(255, 86, 86, 0.9);
+        margin-top: 10px;
+        
+        svg:nth-child(5){
+            color: black;
+        }
+        
+        p{
+            font-size: 0.8em;
+            color: #000;
+            margin-top: 5px;
+            color: grey;
+        }
+    }
+
+    .movie-sinopse{
+        margin-top: 10px;
+        font-weight: bold;
+        line-height: 1.8em;
     }
 `;
 
