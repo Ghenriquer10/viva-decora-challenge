@@ -22,7 +22,7 @@ export const MovieDetailWrapper = styled.div`
     border-radius: 10px;
     background-color: #fff;
     margin-top: 70px;
-    `;
+`;
 
 export const CardDetail = styled.div`
     width: 100%;
@@ -35,15 +35,27 @@ export const CardDetail = styled.div`
     flex-direction: column;
     padding: 0 60px;
 
-    
+    .close-button{
+        position: absolute;
+        top: 50px;
+        right: -20px;
+
+        button{
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            border: none;
+        }
+    }
+
     .image-movie{
         height: 140px;
-        width: 120px;
+        width: 110px;
         margin-top: 20px;
         
         img{
             height: 140px;
-            width: 120px;
+            width: 110px;
         }
     }
     

@@ -43,6 +43,9 @@ export const MovieDetail = ({movieDetail, setMovieDetail, index, movies, genres}
                     <animated.div style={animation}>
                         <C.MovieDetailWrapper>
                             <C.CardDetail>
+                                <div className='close-button'>
+                                    <button onClick={() => setMovieDetail(prev => !prev)} className='devEdit'><h1>X</h1></button>
+                                </div>
                                 <div className='image-movie'>
                                     <img src={imageBaseUrl + movies[index].poster_path} alt="Imagem poster do filme"/>
                                 </div>
@@ -66,6 +69,7 @@ export const MovieDetail = ({movieDetail, setMovieDetail, index, movies, genres}
                                     (movies[index].overview).slice(0, 350)}</p>
                                 </div>
                             </C.CardDetail>
+                            
                         </C.MovieDetailWrapper>
                     </animated.div>
                 </C.Container>)
