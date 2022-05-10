@@ -56,6 +56,36 @@ export default function Home(){
        setMovieDetail(prev => !prev)
    }
 
+   function handleLikedMovie(movies, index){
+        const savedMovie = localStorage.getItem('likedMovies')
+        const likedMovies = JSON.parse(savedMovie) || [];
+        const hasLikedMovie = likedMovies.some((likedMovie) => likedMovie.id === movies[index].id)
+
+        if(hasLikedMovie){
+            alert('Você já curtiu esse filme')
+            return
+        }
+
+        likedMovies.push(movies[index])
+        localStorage.setItem('likedMovies', JSON.stringify(likedMovies))
+        alert('Você curtiu esse filme!')
+   }
+
+   function handleUnlikedMovie(movies, index){
+        const savedUnlikeddMovie = localStorage.getItem('unlikedMovies')
+        const unlikedMovies = JSON.parse(savedUnlikeddMovie) || [];
+        const hasUnlikedMovie = unlikedMovies.some((unlikedMovie) => unlikedMovie.id === movies[index].id)
+
+        if(hasUnlikedMovie){
+            alert('Você já descurtiu esse filme!')
+            return
+        }
+
+        unlikedMovies.push(movies[index]);
+        localStorage.setItem('unlikedMovies', JSON.stringify(unlikedMovies))
+        alert('Filme descurtido com sucesso!')
+   }
+
     return(
         <>
             {movies ?
@@ -91,9 +121,9 @@ export default function Home(){
                             </div>
                         </C.Card>
                         <C.Buttons>
-                            <button className='choose-liked'><img src={unliked} alt='imagem de dedo para baixo'/><p>Não curti!</p></button>
+                            <button onClick={(e) =>  handleUnlikedMovie(movies, index)} className='choose-liked'><img src={unliked} alt='imagem de dedo para baixo'/><p>Não curti!</p></button>
                             <button className='next' onClick={nextMovie}><p>Pular</p></button>
-                            <button className='choose-liked'><img src={liked} alt='imiagem de dedo para cima'/><p>Curti!</p></button>
+                            <button onClick={(e) => handleLikedMovie(movies, index)} className='choose-liked'><img src={liked} alt='imiagem de dedo para cima'/><p>Curti!</p></button>
                         </C.Buttons>
                     </C.CardContainer>
                 </C.Container> :

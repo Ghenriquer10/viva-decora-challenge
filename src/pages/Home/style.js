@@ -29,7 +29,7 @@ export const Card = styled.div`
         width: 100%;
         display: flex;
         background: rgb(253,253,255);
-        background: linear-gradient(0deg, rgba(253,253,255,0.31726193895526966) 39%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(0deg, rgba(253,253,255,0.31726193895526966) 10%, rgba(255,255,255,0) 100%);
     }
 `;
 
