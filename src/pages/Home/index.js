@@ -6,6 +6,7 @@ import unliked from '../../assets/unliked.png'
 import apiGenres from '../../services/apiGenres'
 import {AiFillHeart, AiOutlineHeart} from 'react-icons/ai'
 import { MovieDetail } from '../../components/MovieDetail'
+import { toast } from 'react-toastify'
 
 
 export default function Home(){
@@ -25,13 +26,12 @@ export default function Home(){
             const results = await apiGenres.get('language=pt-BR')
             setGenres(results.data.genres)
         }
-
         loadMovies()
         loadGenres()
     }, []) 
 
     function nextMovie(){
-        if (index === 19){
+        if (index === movies.length - 1){
             setIndex(0)
         } else {
             setIndex(index + 1)
@@ -54,38 +54,50 @@ export default function Home(){
 
    function handleMovieDetail(){
        setMovieDetail(prev => !prev)
-   }
+   }    
 
    function handleLikedMovie(movies, index){
         const savedMovie = localStorage.getItem('likedMovies')
+        const unlikedMoviesStorage = localStorage.getItem('unlikedMovies')
+        const unlikedMovies = JSON.parse(unlikedMoviesStorage) || []
         const likedMovies = JSON.parse(savedMovie) || [];
-        const hasLikedMovie = likedMovies.some((likedMovie) => likedMovie.id === movies[index].id)
+        const hasLikedMovie = likedMovies.some((likedMovie) => likedMovie.id === movies[index].id) || unlikedMovies.some((unlikedMovie) => unlikedMovie.id === movies[index].id)
 
         if(hasLikedMovie){
-            alert('Você já curtiu esse filme')
+            toast.warning('Você já avaliou esse filme!', {
+                theme: 'colored'
+            })
             return
         }
-
+        
         likedMovies.push(movies[index])
         localStorage.setItem('likedMovies', JSON.stringify(likedMovies))
-        alert('Você curtiu esse filme!')
-   }
-
-   function handleUnlikedMovie(movies, index){
+        toast.success('Filme curtido com sucesso!', {
+            theme: 'colored'
+        })
+    }
+    
+    function handleUnlikedMovie(movies, index){
         const savedUnlikeddMovie = localStorage.getItem('unlikedMovies')
+        const likedMoviesStorage = localStorage.getItem('likedMovies')
+        const likedMovies = JSON.parse(likedMoviesStorage) || []
         const unlikedMovies = JSON.parse(savedUnlikeddMovie) || [];
-        const hasUnlikedMovie = unlikedMovies.some((unlikedMovie) => unlikedMovie.id === movies[index].id)
-
+        const hasUnlikedMovie = unlikedMovies.some((unlikedMovie) => unlikedMovie.id === movies[index].id) || likedMovies.some((likedMovie) => likedMovie.id === movies[index].id)
+        
         if(hasUnlikedMovie){
-            alert('Você já descurtiu esse filme!')
+            toast.warning('Você já avaliou esse filme!', {
+                theme: 'colored'
+            })
             return
         }
-
+        
         unlikedMovies.push(movies[index]);
         localStorage.setItem('unlikedMovies', JSON.stringify(unlikedMovies))
-        alert('Filme descurtido com sucesso!')
-   }
-
+        toast.success('Filme descurtido com sucesso!', {
+            theme: 'colored'
+        })
+    }
+    
     return(
         <>
             {movies ?
