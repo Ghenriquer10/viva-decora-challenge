@@ -52,18 +52,18 @@ export const HasMovies = styled.div`
     
     .likedMovies{
         display: grid;
-        grid-gap: 20px;
-        grid-column-gap: 5px;
+        grid-gap: 40px;
+        column-gap: 0px;
         grid-template-columns: auto auto auto;  
-        width: 90%;
+        width: 80%;
     }
 `;
 
 export const Card = styled.div`
     margin: auto;
-    width: 420px;
-    height: 294px;
-    background-size:  420px 294px;
+    width: 320px;
+    height: 394px;
+    background-size:  320px 394px;
     background-repeat: no-repeat;
     
     &:hover{
@@ -76,7 +76,7 @@ export const Card = styled.div`
         width: 100%;
         display: flex;
         background: rgb(253,253,255);
-        background: linear-gradient(0deg, rgba(253,253,255,0.31726193895526966) 5%, rgba(255,255,255,0) 50%);
+        background: linear-gradient(0deg, rgba(253,253,255,0.31726193895526966) 0%, rgba(255,255,255,0) 0%);
     }
 `;
 
@@ -87,21 +87,29 @@ export const About = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: end;
-
-
+    opacity: 0.1;
+    
+    &:hover{
+        transition: all 1s;
+        opacity: 1;
+    }
+    
+    
     .movie-about{
-        margin-bottom: 20px;
-        margin: 20px;
+        background-color: #636161;
         display: flex;
         flex-direction: column;
         height: 35%;
         justify-content: space-between;
+        padding: 20px;
     }
     
-    .movie-tittle{        
+    .movie-tittle{ 
+
         h2{
             font-size: 1.6em;
         }
+
     }
     
     .movie-datas{
@@ -114,8 +122,8 @@ export const About = styled.div`
         }
         
         svg{
-            width: 20px;
-            height: 20px;
+            width: 15px;
+            height: 15px;
         }
 
         svg:nth-child(5){
@@ -124,16 +132,15 @@ export const About = styled.div`
         }
         
         .movie-rating{
-            font-size: 1.1em;
+            font-size: 0.9em;
         }
     }
     
     .movie-sinopse{  
-        display: flex;
         p{
             text-overflow: ellipsis;
             overflow: hidden;
-            font-size: 1.1em;
+            font-size: 0.9em;
         }
 
         button{
