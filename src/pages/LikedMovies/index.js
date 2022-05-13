@@ -45,7 +45,7 @@ export default function LikedMovies(){
                     <>
                         <LikedMovieDetail
                             likedMovies={likedMovies}
-                            index={indexMovie}
+                            indexMovie={indexMovie}
                             likedModal={likedModal}
                             setLikedModal={setLikedModal}
                         />
