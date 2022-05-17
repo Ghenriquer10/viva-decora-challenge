@@ -126,8 +126,10 @@ export default function Home(){
                                         </div>
                                     </div>
                                     <div className='movie-sinopse'>
-                                        <p>{movies[index].overview === '' ? "Filme não contém sinopse." : (movies[index].overview).slice(0, 60) + "... "}</p>
-                                        {movies[index].overview === '' ? null : <button onClick={handleMovieDetail}>Ver sinopse</button>}
+                                        <p className='desktop-size'>{movies[index].overview === '' ? "Filme não contém sinopse." : (movies[index].overview).slice(0, 60) + "... "}</p>
+                                        {movies[index].overview === '' ? null : <button className='desktop-size'onClick={handleMovieDetail}>Ver sinopse</button>}
+                                        <p className='mobile-size'>{movies[index].overview === '' ? "Filme não contém sinopse." : (movies[index].overview).slice(0, 20) + "... "}</p>
+                                        {movies[index].overview === '' ? null : <button className='mobile-size' onClick={handleMovieDetail}>Ver sinopse</button>}
                                     </div>
                                 </C.About>
                             </div>

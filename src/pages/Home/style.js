@@ -4,6 +4,8 @@ export const Container = styled.div`
     width: 100%;
 `;
 
+//----------------------------------------------------//
+
 export const CardContainer = styled.div`
     height: 100%;
     width: 100%;
@@ -13,6 +15,8 @@ export const CardContainer = styled.div`
     margin-top: -30px;
     
 `;
+
+//----------------------------------------------------//
 
 export const Card = styled.div`
     height: 460px;
@@ -31,7 +35,15 @@ export const Card = styled.div`
         background: rgb(253,253,255);
         background: linear-gradient(0deg, rgba(253,253,255,0.31726193895526966) 10%, rgba(255,255,255,0) 100%);
     }
-`;
+    
+    @media(max-width:320px) {
+        height: 350px;
+        width: 294px;
+        background-size: 294px 350px;
+    }
+    `;
+
+//----------------------------------------------------//
 
 export const About = styled.div`
     height: 150px;
@@ -39,13 +51,21 @@ export const About = styled.div`
     margin-top: auto;
     padding: 30px;
     
+    @media(max-width:320px) {
+        padding: 10px;
+    }
     
     .movie-about{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        
+        @media(max-width:320px) {
+            flex-direction: column;
+        }
+        
     }
-    
+    //----------------------------------------------------//
     .movie-tittle{
         height: 60px;
         width: 80%;
@@ -55,10 +75,25 @@ export const About = styled.div`
         justify-content: space-between;
         text-transform: uppercase;
         
+        @media(max-width:320px) {
+            width: 100%;
+            justify-content: center;
+            
+            h2{
+                font-size: 1.1em;
+            }
+            
+            p{
+                display: none;
+            }
+
+        }
+        
         h2{
             text-transform: uppercase;
             font-weight: bold;
             font-family: sans-serif;
+            
         }
         
         p{
@@ -73,15 +108,26 @@ export const About = styled.div`
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        
+        @media(max-width:320px) {
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+
+            svg{
+                height: 15px;
+                width: 15px;
+            }
+        }
 
         .movie-heart{
             color: rgba(255, 86, 86, 0.9);
         }
-
+        
         svg:nth-child(5){
             color: #fff;
         }
-
+        
         p:nth-child(2){
             font-size: 0.8em;
         }
@@ -92,6 +138,18 @@ export const About = styled.div`
         height: 40px;
         display: flex;
         align-items: center;
+
+        @media (min-width:321px) {
+            .mobile-size{
+                display: none;
+            }
+        }
+
+        @media(max-width:320px) {
+            .desktop-size{
+                display: none;
+            }
+        }
         
         p{
             text-overflow: ellipsis;
@@ -102,10 +160,12 @@ export const About = styled.div`
             border: none;
             background-color: rgba(0, 0, 0, 0);
             color: red;
-            font-size: 1.1em;
+            font-size: 0.9em;
         }
     }
 `;
+
+//----------------------------------------------------//
 
 export const Buttons = styled.div`
     height: 100%;
@@ -138,6 +198,7 @@ export const Buttons = styled.div`
             text-transform: uppercase;
             font-weight: bold;
         }
+
     }
 
     button:nth-child(3){
@@ -157,9 +218,24 @@ export const Buttons = styled.div`
         transition: 1s all;
         transform: scale(1.1)
     }
+
+    @media(max-width:320px) {
+        button:nth-child(odd){
+        width: 70px;
+        height: 70px;
+        margin: 0 20px;
+        border-radius: 50%;
+
+        p{
+            display: none;
+        }
+    }
+}
     
   
 `;
+
+//----------------------------------------------------//
 
 export const EmptyMovie = styled.div`
     height: 50%;
