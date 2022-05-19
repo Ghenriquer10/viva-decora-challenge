@@ -6,7 +6,6 @@ export const Container = styled.div`
     background-color: #fff;
     font-family: sans-serif;
     font-size: 0.9em;
-    border-bottom: 10px solid red;
 
     
     .title{
@@ -15,10 +14,15 @@ export const Container = styled.div`
         margin: 50px 0 0 200px;
         height: 100px;
         text-transform: uppercase;
+        
+        @media (max-width: 320px) {
+            margin-left: 5px;
+            font-size: 0.9em;
+        }
     }
+    
 
     .loading{
-        border: 1px solid red;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -56,7 +60,16 @@ export const HasMovies = styled.div`
         column-gap: 0px;
         grid-template-columns: auto auto auto;  
         width: 80%;
+        
+        @media (max-width: 320px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+        }
     }
+    
+    
+   
 `;
 
 export const Card = styled.div`
@@ -66,6 +79,12 @@ export const Card = styled.div`
     background-size:  320px 394px;
     background-repeat: no-repeat;
     
+    @media (max-width:320px) {
+        width: 145px;
+        height: 174px;
+        background-size: 145px 174px ;
+    }
+
     &:hover{
         transition: all 2s;
         transform: scale(1.1);
@@ -78,6 +97,7 @@ export const Card = styled.div`
         background: rgb(253,253,255);
         background: linear-gradient(0deg, rgba(253,253,255,0.31726193895526966) 0%, rgba(255,255,255,0) 0%);
     }
+
 `;
 
 export const About = styled.div`    
@@ -102,14 +122,22 @@ export const About = styled.div`
         height: 35%;
         justify-content: space-between;
         padding: 20px;
+        
+        @media (max-width:320px) {
+            padding: 5px;
+        }
     }
     
     .movie-tittle{ 
-
+        
+        @media (max-width:320px) {
+            font-size: 0.5em;
+        }
+        
         h2{
             font-size: 1.6em;
         }
-
+        
     }
     
     .movie-datas{
@@ -119,6 +147,17 @@ export const About = styled.div`
         
         .movie-heart{
             color: rgba(255, 86, 86, 0.9);
+            @media (max-width:320px) {
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            
         }
         
         svg{
@@ -133,10 +172,19 @@ export const About = styled.div`
         
         .movie-rating{
             font-size: 0.9em;
+
+            @media (max-width:320px) {
+                display: none;
+            }
         }
     }
     
     .movie-sinopse{  
+
+        @media (max-width:320px) {
+                display: none;
+        }
+
         p{
             text-overflow: ellipsis;
             overflow: hidden;
