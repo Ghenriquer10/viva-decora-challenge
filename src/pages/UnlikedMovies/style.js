@@ -15,10 +15,13 @@ export const Container = styled.div`
         margin: 50px 0 0 200px;
         height: 100px;
         text-transform: uppercase;
+        @media (max-width: 480px) {
+            margin-left: 5px;
+            font-size: 0.9em;
+        }
     }
 
     .loading{
-        border: 1px solid red;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -56,6 +59,12 @@ export const HasMovies = styled.div`
         column-gap: 0px;
         grid-template-columns: auto auto auto;  
         width: 80%;
+
+        @media (max-width: 480px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+        }
     }
 `;
 
@@ -65,6 +74,12 @@ export const Card = styled.div`
     height: 394px;
     background-size:  320px 394px;
     background-repeat: no-repeat;
+    
+    @media (max-width:480px) {
+        width: 170px;
+        height: 214px;
+        background-size: 170px 214px ;
+    }
     
     &:hover{
         transition: all 2s;
@@ -102,9 +117,17 @@ export const About = styled.div`
         height: 35%;
         justify-content: space-between;
         padding: 20px;
+
+        @media (max-width: 480px) {
+            padding: 5px;
+        }
     }
     
-    .movie-tittle{ 
+    .movie-tittle{
+        
+        @media (max-width: 480px) {
+            font-size: 0.5em;
+        }
 
         h2{
             font-size: 1.6em;
@@ -119,6 +142,16 @@ export const About = styled.div`
         
         .movie-heart{
             color: rgba(255, 86, 86, 0.9);
+            @media (max-width: 480px) {
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
         }
         
         svg{
@@ -133,10 +166,19 @@ export const About = styled.div`
         
         .movie-rating{
             font-size: 0.9em;
+
+            @media (max-width:480px) {
+                display: none;
+            }
         }
     }
     
     .movie-sinopse{  
+
+        @media (max-width: 480px) {
+                display: none;
+        }
+
         p{
             text-overflow: ellipsis;
             overflow: hidden;

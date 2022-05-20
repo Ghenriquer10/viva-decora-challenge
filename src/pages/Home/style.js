@@ -36,10 +36,10 @@ export const Card = styled.div`
         background: linear-gradient(0deg, rgba(253,253,255,0.31726193895526966) 10%, rgba(255,255,255,0) 100%);
     }
     
-    @media(max-width:320px) {
+    @media(max-width:480px) {
         height: 350px;
-        width: 294px;
-        background-size: 294px 350px;
+        width: 320px;
+        background-size: 100% 100%;
     }
     `;
 
@@ -51,7 +51,7 @@ export const About = styled.div`
     margin-top: auto;
     padding: 30px;
     
-    @media(max-width:320px) {
+    @media(max-width:480px) {
         padding: 10px;
     }
     
@@ -60,7 +60,7 @@ export const About = styled.div`
         align-items: center;
         justify-content: space-between;
         
-        @media(max-width:320px) {
+        @media(max-width:480px) {
             flex-direction: column;
         }
         
@@ -75,7 +75,7 @@ export const About = styled.div`
         justify-content: space-between;
         text-transform: uppercase;
         
-        @media(max-width:320px) {
+        @media(max-width:480px) {
             width: 100%;
             justify-content: center;
             
@@ -109,7 +109,7 @@ export const About = styled.div`
         justify-content: center;
         flex-direction: column;
         
-        @media(max-width:320px) {
+        @media(max-width:480px) {
             flex-direction: row;
             width: 100%;
             justify-content: space-between;
@@ -139,13 +139,13 @@ export const About = styled.div`
         display: flex;
         align-items: center;
 
-        @media (min-width:321px) {
+        @media (min-width:481px) {
             .mobile-size{
                 display: none;
             }
         }
 
-        @media(max-width:320px) {
+        @media(max-width:480px) {
             .desktop-size{
                 display: none;
             }
@@ -219,7 +219,7 @@ export const Buttons = styled.div`
         transform: scale(1.1)
     }
 
-    @media(max-width:320px) {
+    @media(max-width:480px) {
         button:nth-child(odd){
         width: 70px;
         height: 70px;
