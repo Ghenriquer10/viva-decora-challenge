@@ -12,6 +12,7 @@ export default function LikedMovies(){
     const imageBaseUrl = process.env.REACT_APP_IMAGEBASE
 
 
+
     useEffect(() => {
         const likedMoviesStorage = localStorage.getItem('likedMovies')
         const likedMovies = JSON.parse(likedMoviesStorage)
@@ -54,27 +55,28 @@ export default function LikedMovies(){
                                 {likedMovies.map((movie, index) => {
                                     return(
                                         <C.Card key={movie.id} style={{backgroundImage: `url(${imageBaseUrl + movie.poster_path})`}}>
-                                        <div className='gradient-effect'>
-                                            <C.About>
-                                                <div className='movie-about'>
-                                                    <div className='movie-tittle'>
-                                                        <h2>{movie.title}</h2>
-                                                    </div>
-                                                    <div className='movie-datas'>
-                                                        <div className='movie-heart'>
-                                                            <AiFillHeart/><AiFillHeart/><AiFillHeart/><AiFillHeart/><AiOutlineHeart/>
+                                             <div className='gradient-effect'>
+                                                <C.About>
+                                                    <div className='movie-about'>
+                                                        <div className='movie-tittle'>
+                                                            <h2>{movie.title}</h2>
                                                         </div>
-                                                        <div className='movie-rating'>
-                                                            <p>({movie.vote_count} avaliações)</p>
+                                                        <div className='movie-datas'>
+                                                            <div className='movie-heart'>
+                                                                <AiFillHeart/><AiFillHeart/><AiFillHeart/><AiFillHeart/><AiOutlineHeart/>
+                                                            </div>
+                                                            <div className='movie-rating'>
+                                                                <p>({movie.vote_count} avaliações)</p>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className='movie-sinopse'>
-                                                        <p>{movie.overview ? (movie.overview).slice(0, 30) + "...  " : 'Este filme não tem sinopse.'} 
-                                                        {movie.overview === '' ? null : <button onClick={(e) => handleMovieDetail(index)}> Ver sinopse </button>}</p>
-                                                    </div>
-                                                </div>
-                                            </C.About>
-                                        </div>   
+                                                        <div className='movie-sinopse'>
+                                                            <p>{movie.overview ? (movie.overview).slice(0, 30) + "...  " : 'Este filme não tem sinopse.'} 
+                                                            {movie.overview === '' ? null : <button onClick={(e) => handleMovieDetail(index)}> Ver sinopse </button>}</p>
+                                                            <button onClick={(e) => handleMovieDetail(index)}> Ver sinopse </button>
+                                                        </div>
+                                                    </div>    
+                                                </C.About>
+                                            </div>      
                                         </C.Card>
                                     )
                                 })}

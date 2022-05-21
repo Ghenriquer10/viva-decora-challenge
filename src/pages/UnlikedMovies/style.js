@@ -102,7 +102,7 @@ export const About = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: end;
-    opacity: 0.1;
+    opacity: 0.5;
     
     &:hover{
         transition: all 1s;
@@ -111,7 +111,7 @@ export const About = styled.div`
     
     
     .movie-about{
-        background-color: #636161;
+        background-color: #000000;
         display: flex;
         flex-direction: column;
         height: 35%;
@@ -119,7 +119,7 @@ export const About = styled.div`
         padding: 20px;
 
         @media (max-width: 480px) {
-            padding: 5px;
+            padding: 15px;
         }
     }
     

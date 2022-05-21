@@ -22,7 +22,12 @@ export const MovieDetailWrapper = styled.div`
     border-radius: 10px;
     background-color: #fff;
     margin-top: 70px;
-`;
+
+    @media (max-width: 480px) {
+        width: 320px;
+        height: 600px;
+    }
+    `;
 
 export const CardDetail = styled.div`
     width: 100%;
@@ -34,6 +39,10 @@ export const CardDetail = styled.div`
     align-items: center;
     flex-direction: column;
     padding: 0 60px;
+    
+    @media (max-width: 480px) {
+        padding: 0 20px;
+    }
 
     .close-button{
         position: absolute;
@@ -52,6 +61,10 @@ export const CardDetail = styled.div`
         height: 140px;
         width: 110px;
         margin-top: 20px;
+        
+        @media (max-width: 480px) {
+            margin-top: 50px;
+        }
         
         img{
             height: 140px;
