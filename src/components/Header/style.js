@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    height: 150px;
+    height: 120px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -16,42 +16,57 @@ export const Container = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-    
+        
         img{
             height: 38px;
             width: 165px;
         }
     }
-    
-    .menu{
-        height: 50%;
-        width: 50%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .menu a{
-        text-transform: uppercase;
-        font-family: monospace;
-        font-size: 1.2em;
-    }
-      
-    /* Specific styles for non-active links */
-    .link {
-        color: white;
-        opacity: 0.6;
-    }
-    
-    /* Specific styles for active links */
-    .link-active {
-        color: white;
-        border-bottom: 5px solid white;
-    }
-
-    .content {
-        text-align: center;
-    }
-
-
 `;
+
+export const MenuMobile = styled.div`
+    position: fixed;
+    left: 30px;
+    cursor: pointer;
+
+    svg{
+        height: 30px;
+        width: 30px;
+    }
+
+    @media (min-width: 480px) {
+        display: none;
+    }
+`;
+
+export const MenuDesktop = styled.div`
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media (max-width: 481px) {
+        display: none;
+    }
+        
+        a{
+            text-transform: uppercase;
+            font-family: monospace;
+            font-size: 1.2em;
+        }
+        
+        .link {
+            color: white;
+            opacity: 0.6;
+        }
+        
+        .link-active {
+            color: white;
+            border-bottom: 5px solid white;
+        }
+        
+        .content {
+            text-align: center;
+        }
+    `;
