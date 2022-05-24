@@ -162,8 +162,8 @@ export const About = styled.div`
                 justify-content: space-evenly;
                 
                 svg{
-                    width: 20px;
-                    height: 20px;
+                    width: 15px;
+                    height: 15px;
                 }
             }
             
@@ -188,12 +188,23 @@ export const About = styled.div`
         }
     }
     
-    .movie-sinopse{  
+    .movie-sinopse{ 
         
-        @media (max-width: 480px) {
-            display: none;
+        .mobile-button{
+            font-size: 0.9em;
         }
         
+        .desktop-button{
+            @media (max-width: 480px) {
+                display: none;
+            }
+        }
+        .mobile-button{
+            @media (min-width: 480px) {
+                display: none;
+            }
+        }
+
         p{
             text-overflow: ellipsis;
             overflow: hidden;

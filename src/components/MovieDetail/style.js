@@ -25,7 +25,7 @@ export const MovieDetailWrapper = styled.div`
 
     @media (max-width: 480px) {
         width: 320px;
-        height: 600px;
+        height: 700px;
     }
     `;
 

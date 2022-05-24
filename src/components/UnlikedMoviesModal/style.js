@@ -10,7 +10,9 @@ export const Container = styled.div`
     align-items: center;
     z-index: 10;
     top: 0;
-    `;
+`;
+
+// ---------------------------------------------------------------//
 
 export const MovieDetailWrapper = styled.div`
     height: 470px;
@@ -22,7 +24,15 @@ export const MovieDetailWrapper = styled.div`
     border-radius: 10px;
     background-color: #fff;
     margin-top: 70px;
+
+    @media (max-width: 480px) {
+        height: 700px;
+        width: 350px;
+    }
+
 `;
+
+// ---------------------------------------------------------------//
 
 export const CardDetail = styled.div`
     width: 100%;
@@ -34,6 +44,10 @@ export const CardDetail = styled.div`
     align-items: center;
     flex-direction: column;
     padding: 0 60px;
+
+    @media (max-width: 480px) {
+        padding: 0 20px;
+    }
 
     .close-button{
         position: absolute;
@@ -56,6 +70,10 @@ export const CardDetail = styled.div`
         img{
             height: 140px;
             width: 110px;
+        }
+
+        @media (max-width: 480px) {
+           margin-top : 70px;
         }
     }
     

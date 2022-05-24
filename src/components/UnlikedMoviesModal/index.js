@@ -51,7 +51,7 @@ export const UnlikedMovieDetail = ({unlikedModal, setUnlikedModal, indexMovie, u
                                     </div>
                                 </div>
                                 <div className='movie-sinopse'>
-                                    <p>{(unlikedMovies[indexMovie].overview).slice(0,430)+'...'}</p>
+                                    <p>{(unlikedMovies[indexMovie].overview).slice(0,430)+'..'}</p>
                                 </div>
                             </C.CardDetail>
                         </C.MovieDetailWrapper>
