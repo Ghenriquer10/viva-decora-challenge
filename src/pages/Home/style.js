@@ -36,7 +36,7 @@ export const Card = styled.div`
     border-radius: 5px;
     color: #FFF;
     display: flex;
-    
+
     .gradient-effect{
         height: 100%;
         width: 100%;
@@ -50,7 +50,12 @@ export const Card = styled.div`
         width: 320px;
         background-size: 100% 100%;
     }
-    `;
+    @media(min-width: 481px) and (max-width: 768px) {
+        height: 450px;
+        width: 420px;
+        background-size: 100% 100%;
+    }    
+`;
 
 //----------------------------------------------------//
 
@@ -117,8 +122,21 @@ export const About = styled.div`
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        
         
         @media(max-width:480px) {
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+
+            svg{
+                height: 15px;
+                width: 15px;
+            }
+        }
+
+        @media(min-width: 481px) and (max-width: 768px) {
             flex-direction: row;
             width: 100%;
             justify-content: space-between;
@@ -155,6 +173,12 @@ export const About = styled.div`
         }
 
         @media(max-width:480px) {
+            .desktop-size{
+                display: none;
+            }
+        }
+        
+        @media(min-width: 481px) and (max-width: 768px) {
             .desktop-size{
                 display: none;
             }
@@ -235,16 +259,29 @@ export const Buttons = styled.div`
 
     @media(max-width:480px) {
         button:nth-child(odd){
-        width: 70px;
-        height: 70px;
-        margin: 0 20px;
-        border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            margin: 0 20px;
+            border-radius: 50%;
 
-        p{
-            display: none;
+            p{
+                display: none;
+            }
         }
     }
-}
+
+    @media(min-width: 481px) and (max-width: 768px) {
+        button:nth-child(odd){
+            width: 70px;
+            height: 70px;
+            margin: 0 50px;
+            border-radius: 50%;
+
+            p{
+                display: none;
+            }
+        }
+    } 
     
   
 `;

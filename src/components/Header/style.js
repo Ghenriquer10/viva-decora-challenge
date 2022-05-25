@@ -49,6 +49,10 @@ export const MenuDesktop = styled.div`
     @media (max-width: 481px) {
         display: none;
     }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+        
+    }
         
         a{
             text-transform: uppercase;

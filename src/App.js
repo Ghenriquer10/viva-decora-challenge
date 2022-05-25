@@ -4,7 +4,6 @@ import 'react-toastify/dist/ReactToastify.css'
 import DataProvider from './contexts/datas';
 import MyRoutes from './routes/routes';
 import GlobalStyle from './styles/global'
- 
 
 function App() {
   return (
