@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import apiMovie from '../../services/apiMovies'
 import * as C from './style'
 import liked from '../../assets/liked.png'
@@ -7,6 +7,8 @@ import apiGenres from '../../services/apiGenres'
 import {AiFillHeart, AiOutlineHeart} from 'react-icons/ai'
 import { MovieDetail } from '../../components/MovieDetail'
 import { toast } from 'react-toastify'
+import {MobileHeader } from '../../components/MobileHeader'
+import { DataContext } from '../../contexts/datas'
 
 
 export default function Home(){
@@ -15,6 +17,8 @@ export default function Home(){
     const [movies, setMovies] = useState();
     const [genres, setGenres] = useState();
     const [movieDetail, setMovieDetail] = useState(false);
+
+    const {menuMobile} = useContext(DataContext)
 
     useEffect(() => {
         async function loadMovies(){
@@ -99,9 +103,10 @@ export default function Home(){
     }
     
     return(
-        <>
+        <C.Main>
             {movies ?
                 <C.Container>
+                    {menuMobile ? <MobileHeader/> : null}
                     <MovieDetail
                         movieDetail={movieDetail}
                         setMovieDetail={setMovieDetail}
@@ -147,6 +152,6 @@ export default function Home(){
                     </div>
                 </C.EmptyMovie>
             }  
-        </>
+        </C.Main>
     )
 }

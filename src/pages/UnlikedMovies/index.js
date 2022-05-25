@@ -1,8 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import * as C from './style';
 import emptyMovie from '../../assets/video-camera-vazio.png'
 import {AiFillHeart, AiOutlineHeart} from 'react-icons/ai'
 import { UnlikedMovieDetail } from '../../components/UnlikedMoviesModal';
+import { DataContext } from '../../contexts/datas';
+import { MobileHeader } from '../../components/MobileHeader';
 
 export default function UnlikedMovies(){
     const [loading, setLoading] = useState(true)
@@ -10,6 +12,8 @@ export default function UnlikedMovies(){
     const [indexMovie, setIndexMovie] = useState(0);
     const [unlikedModal, setUnlikedModal] = useState(false)
     const imageBaseUrl = process.env.REACT_APP_IMAGEBASE
+
+    const {menuMobile} = useContext(DataContext)
 
 
     useEffect(() => {
@@ -26,6 +30,7 @@ export default function UnlikedMovies(){
 
     return(
         <C.Container>
+                {menuMobile ? <MobileHeader/> : null}
                 <div className='title'>
                     <h1>Filmes curtidos</h1>
                 </div>

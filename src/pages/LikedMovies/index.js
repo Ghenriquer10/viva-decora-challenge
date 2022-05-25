@@ -1,8 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import * as C from './style';
 import emptyMovie from '../../assets/video-camera-vazio.png'
 import {AiFillHeart, AiOutlineHeart} from 'react-icons/ai'
 import { LikedMovieDetail } from '../../components/LikedMovieDetail';
+import { MobileHeader } from '../../components/MobileHeader';
+import { DataContext } from '../../contexts/datas';
 
 export default function LikedMovies(){
     const [loading, setLoading] = useState(true)
@@ -11,7 +13,7 @@ export default function LikedMovies(){
     const [likedModal, setLikedModal] = useState(false)
     const imageBaseUrl = process.env.REACT_APP_IMAGEBASE
 
-
+    const {menuMobile} = useContext(DataContext)
 
     useEffect(() => {
         const likedMoviesStorage = localStorage.getItem('likedMovies')
@@ -27,6 +29,7 @@ export default function LikedMovies(){
 
     return(
         <C.Container>
+            {menuMobile ? <MobileHeader/> : null}
                 <div className='title'>
                     <h1>Filmes curtidos</h1>
                 </div>

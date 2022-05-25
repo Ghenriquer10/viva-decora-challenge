@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import * as C from './style'
 import logo from '../../assets/logos/logo-viva-decora.png'
 import {NavLink} from 'react-router-dom'
 import {GiHamburgerMenu} from 'react-icons/gi';
+import { DataContext } from '../../contexts/datas';
 
-export default function Header(){
+export const Header = () => {
 
+    const { setMenuMobile} = useContext(DataContext)
+    
     function handleMenuMobile(){
-        alert('Clicou!')
+        setMenuMobile(prev => !prev)
     }
 
     return(
