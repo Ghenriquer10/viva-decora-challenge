@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Main = styled.main`
 
-    @media (max-width: 480px) {
+    @media (min-width: 320px) and (max-width: 480px) {
         display: flex;
         flex-direction: row;
     }
@@ -45,14 +45,14 @@ export const Card = styled.div`
         background: linear-gradient(0deg, rgba(253,253,255,0.31726193895526966) 10%, rgba(255,255,255,0) 100%);
     }
     
-    @media(max-width:480px) {
+    @media(min-width:320px) and (max-width:480px) {
         height: 350px;
         width: 320px;
         background-size: 100% 100%;
     }
     @media(min-width: 481px) and (max-width: 768px) {
         height: 450px;
-        width: 420px;
+        width: 490px;
         background-size: 100% 100%;
     }    
 `;
@@ -65,7 +65,7 @@ export const About = styled.div`
     margin-top: auto;
     padding: 30px;
     
-    @media(max-width:480px) {
+    @media (min-width: 320px) and (max-width: 480px) {
         padding: 10px;
     }
     
@@ -89,7 +89,7 @@ export const About = styled.div`
         justify-content: space-between;
         text-transform: uppercase;
         
-        @media(max-width:480px) {
+        @media (min-width: 320px) and (max-width: 480px) {
             width: 100%;
             justify-content: center;
             
@@ -101,6 +101,20 @@ export const About = styled.div`
                 display: none;
             }
 
+        }
+
+        @media (min-width: 481px) and (max-width: 768px) {
+            width: 100%;
+            justify-content: center;
+            
+            h2{
+                font-size: 1.1em;
+            }
+
+            p{
+                display: none;
+            }
+            
         }
         
         h2{
@@ -125,7 +139,7 @@ export const About = styled.div`
 
         
         
-        @media(max-width:480px) {
+        @media (min-width: 320px) and (max-width: 480px) {
             flex-direction: row;
             width: 100%;
             justify-content: space-between;
@@ -172,7 +186,7 @@ export const About = styled.div`
             }
         }
 
-        @media(max-width:480px) {
+        @media (min-width: 320px) and (max-width: 480px) {
             .desktop-size{
                 display: none;
             }
@@ -180,7 +194,7 @@ export const About = styled.div`
         
         @media(min-width: 481px) and (max-width: 768px) {
             .desktop-size{
-                display: none;
+                font-size: 0.7em;
             }
         }
         
@@ -208,7 +222,7 @@ export const Buttons = styled.div`
     justify-content: center;
     margin-top: 20px;
 
-    @media (max-width: 480px) {
+    @media (min-width: 320px) and (max-width: 480px) {
         height: 100px;
         margin-top: 50px;
     }
@@ -257,7 +271,7 @@ export const Buttons = styled.div`
         transform: scale(1.1)
     }
 
-    @media(max-width:480px) {
+    @media (min-width: 320px) and (max-width: 480px) {
         button:nth-child(odd){
             width: 70px;
             height: 70px;

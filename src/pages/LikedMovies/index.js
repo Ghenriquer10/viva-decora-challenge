@@ -73,7 +73,7 @@ export default function LikedMovies(){
                                                             </div>
                                                         </div>
                                                         <div className='movie-sinopse'>
-                                                            <p className='desktop-button'>{movie.overview ? (movie.overview).slice(0, 30) + "...  " : 'Este filme não tem sinopse.'} 
+                                                            <p className='desktop-button'>{movie.overview ? (movie.overview).slice(0, 20) + "...  " : 'Este filme não tem sinopse.'} 
                                                             {movie.overview === '' ? null : <button onClick={(e) => handleMovieDetail(index)}> Ver sinopse </button>}</p>
                                                             {movie.overview === '' ?  null : <button className='mobile-button' onClick={(e) => handleMovieDetail(index)}> Ver sinopse </button>}
                                                         </div>

@@ -16,7 +16,7 @@ export const Container = styled.div`
         height: 100px;
         text-transform: uppercase;
         
-        @media (max-width: 480px) {
+        @media (min-width: 320px) and (max-width: 480px) {
             margin-left: 5px;
             font-size: 0.9em;
         }
@@ -66,11 +66,12 @@ export const HasMovies = styled.div`
         grid-template-columns: auto auto auto;  
         width: 80%;
         
-        @media (max-width: 480px) {
+        @media (min-width: 320px) and (max-width: 1024px) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             width: 100%;
         }
+
     }
     
     
@@ -86,10 +87,16 @@ export const Card = styled.div`
     background-size:  320px 394px;
     background-repeat: no-repeat;
     
-    @media (max-width:480px) {
+    @media(min-width: 320px) and (max-width:480px) {
         width: 170px;
         height: 214px;
-        background-size: 170px 214px ;
+        background-size: 170px 214px;
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+        width: 210px;
+        height: 274px;
+        background-size: 210px 274px;
     }
     
     &:hover{
@@ -116,8 +123,7 @@ export const About = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: end;
-    opacity: 0.5;
-    
+
     &:hover{
         transition: all 1s;
         opacity: 1;
@@ -132,14 +138,14 @@ export const About = styled.div`
         justify-content: space-between;
         padding: 20px;
         
-        @media (max-width: 480px) {
+        @media (min-width: 320px) and (max-width: 480px) {
             padding: 15px;
         }
     }
     
     .movie-tittle{ 
 
-        @media (max-width: 480px) {
+        @media (min-width: 320px) and (max-width: 768px) {
             font-size: 0.5em;
         }
         
@@ -156,8 +162,8 @@ export const About = styled.div`
         
         .movie-heart{
             color: rgba(255, 86, 86, 0.9);
-            @media (max-width: 480px) {
-                width: 100%;
+            @media (min-width: 320px) and (max-width: 768px) {
+                width: 70%;
                 display: flex;
                 justify-content: space-evenly;
                 
@@ -181,8 +187,7 @@ export const About = styled.div`
         
         .movie-rating{
             font-size: 0.9em;
-            
-            @media (max-width: 480px) {
+            @media (min-width: 320px) and (max-width: 768px) {
                 display: none;
             }
         }
@@ -195,12 +200,13 @@ export const About = styled.div`
         }
         
         .desktop-button{
-            @media (max-width: 480px) {
+            @media (min-width: 320px) and (max-width: 480px) {
                 display: none;
             }
         }
+        
         .mobile-button{
-            @media (min-width: 480px) {
+            @media (min-width: 320px) and (min-width: 480px) {
                 display: none;
             }
         }

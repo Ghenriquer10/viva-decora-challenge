@@ -9,9 +9,9 @@ export const Container = styled.div`
     top: 0;
     align-items: center;
     justify-content: center;
-    z-index: 99;
+    z-index: 0;
     display: flex;
-    @media (min-width: 481px) {
+    @media (min-width: 768px) {
         display: none;
     }
 `;
@@ -29,8 +29,8 @@ export const MenuMobile = styled.div`
 
     .btn-exit{
         position: fixed;
-        top: 50px;
-        right: 100px;
+        top: 40px;
+        left: 30px;
         cursor: pointer;
 
         svg{
@@ -46,6 +46,7 @@ export const MenuMobile = styled.div`
             text-transform: uppercase;
             font-family: monospace;
             font-size: 1.2em;
+            font-weight: bolder;
         }
         
         .link {

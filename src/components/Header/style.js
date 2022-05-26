@@ -25,7 +25,7 @@ export const Container = styled.div`
 `;
 
 export const MenuMobile = styled.div`
-    position: fixed;
+    position: absolute;
     left: 30px;
     cursor: pointer;
 
@@ -34,7 +34,7 @@ export const MenuMobile = styled.div`
         width: 30px;
     }
 
-    @media (min-width: 480px) {
+    @media (min-width: 768px) {
         display: none;
     }
 `;
@@ -45,19 +45,15 @@ export const MenuDesktop = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+        @media (min-width: 320px) and (max-width: 768px) {
+            display: none;
+    
+        }
 
-    @media (max-width: 481px) {
-        display: none;
-    }
-
-    @media (min-width: 481px) and (max-width: 768px) {
-        
-    }
-        
         a{
             text-transform: uppercase;
             font-family: monospace;
-            font-size: 1.2em;
+            font-size: 0.9em;
         }
         
         .link {
@@ -73,4 +69,13 @@ export const MenuDesktop = styled.div`
         .content {
             text-align: center;
         }
-    `;
+
+        @media (min-width: 481px) and (max-width: 768px) {
+            a{
+                text-transform: uppercase;
+                font-family: monospace;
+                font-size: 0.9em;
+                margin: 0 50px;
+            }
+        }
+`;

@@ -32,7 +32,7 @@ export default function UnlikedMovies(){
         <C.Container>
                 {menuMobile ? <MobileHeader/> : null}
                 <div className='title'>
-                    <h1>Filmes curtidos</h1>
+                    <h1>Filmes não curtidos</h1>
                 </div>
                 {loading && 
                     <div className='loading'>

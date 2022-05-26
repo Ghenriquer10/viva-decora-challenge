@@ -7,16 +7,14 @@ import { DataContext } from '../../contexts/datas';
 
 export const Header = () => {
 
-    const { setMenuMobile} = useContext(DataContext)
-    
-    function handleMenuMobile(){
-        setMenuMobile(prev => !prev)
-    }
+    const { setMenuMobile } = useContext(DataContext)
 
     return(
         <C.Container>
             <C.MenuMobile>
-                <GiHamburgerMenu onClick={handleMenuMobile}/>
+                <GiHamburgerMenu onClick={() => {
+                    setMenuMobile(prev => !prev)
+                }}/>
             </C.MenuMobile>
             <div className>
                 <img src={logo} alt="imagem com a logo da empresa viva decora"/>
