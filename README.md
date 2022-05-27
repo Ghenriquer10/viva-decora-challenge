@@ -6,6 +6,8 @@ A empresa Viva Decora lançou um desafio front-end (https://github.com/vivadecor
 
 ### Link do projeto no Netlify: https://viva-decora-challenge.netlify.app/
 
+### Caso queira executa-lo em seu computador faça o clone desse repositório e abra-o no visual studio, após isso execute o npm i no terminal de comando para instar o pacote de dependências. Por ultimo execute o projeto com npm start ou yarn start.
+
 ### Tecs usadas: 
 React.js:
 
