@@ -4,6 +4,8 @@
 A empresa Viva Decora lançou um desafio front-end (https://github.com/vivadecora/projeto-front-end-vivadecora-nao-fazer-fork), que tem como intuito um sistema curtidor de filmes, onde através da Api de filmes TMDB (The movie data base), seria disponibilizado dados de filmes do momento, dados esses que são tratados pelo desenvolvedor e mostrados através de Cards ao usuário com a opção de curtir ou descurtir um filme, além da janela modal com a descrição do mesmo. Junto a tela inicial seriam desenvolvidos mais duas telas com a lista dos filmes curtidos e descurtidos pelo usuário. 
 </p>
 
+### Link do projeto no Netlify: https://viva-decora-challenge.netlify.app/
+
 ### Tecs usadas: 
 React.js:
 
