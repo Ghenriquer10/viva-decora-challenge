@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+## Desafio front end Viva Decora
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>
+A empresa Viva Decora lançou um desafio front-end (https://github.com/vivadecora/projeto-front-end-vivadecora-nao-fazer-fork), que tem como intuito um sistema curtidor de filmes, onde através da Api de filmes TMDB (The movie data base), seria disponibilizado dados de filmes do momento, dados esses que são tratados pelo desenvolvedor e mostrados através de Cards ao usuário com a opção de curtir ou descurtir um filme, além da janela modal com a descrição do mesmo. Junto a tela inicial seriam desenvolvidos mais duas telas com a lista dos filmes curtidos e descurtidos pelo usuário. 
+</p>
 
-## Available Scripts
+### Tecs usadas: 
+React.js:
 
-In the project directory, you can run:
+useState, useEffect, context-api, axios, react-toastfy, react-spring, react-router-dom, react-icons
 
-### `npm start`
+Persisti os filmes curtidos pelo usuário no Local Storage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Projeto mobile: 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![20220527_183417](https://user-images.githubusercontent.com/61561169/170797364-890b3bf0-af79-471f-91a8-006da0f2c24c.gif)
 
-### `npm test`
+## Projeto Desktop: 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![viva decora desktop1](https://user-images.githubusercontent.com/61561169/170799535-061464aa-62cb-4756-9781-23366c5f746c.gif)
 
-### `npm run build`
+## Diferentes dimensões:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![resizing-viva-decora](https://user-images.githubusercontent.com/61561169/170800285-f4cd3a45-1d9c-4dc8-bac4-9e9d82d255a4.gif)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
