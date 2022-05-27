@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+//------------------------------------------------------//
+
 export const Container = styled.div`
     width: 100%;
     height: 100%;
@@ -10,7 +12,9 @@ export const Container = styled.div`
     align-items: center;
     z-index: 10;
     top: 0;
-    `;
+`;
+
+//------------------------------------------------------//
 
 export const MovieDetailWrapper = styled.div`
     height: 470px;
@@ -21,13 +25,20 @@ export const MovieDetailWrapper = styled.div`
     z-index: 10;
     border-radius: 10px;
     background-color: #fff;
-    margin-top: 70px;
+    
 
-    @media (max-width: 480px) {
+    @media (min-width: 320px) and (max-width: 480px) {
         width: 320px;
-        height: 700px;
+        height: 650px;
     }
-    `;
+
+    @media (min-width: 481px) and (max-width: 768px) {
+        width: 420px;
+        height: 600px;
+    }
+`;
+
+//------------------------------------------------------//
 
 export const CardDetail = styled.div`
     width: 100%;
@@ -40,13 +51,17 @@ export const CardDetail = styled.div`
     flex-direction: column;
     padding: 0 60px;
     
-    @media (max-width: 480px) {
+    @media (min-width: 320px) and (max-width: 480px) {
         padding: 0 20px;
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+        padding: 0 10px;
     }
 
     .close-button{
         position: absolute;
-        top: 50px;
+        top: -20px;
         right: -20px;
 
         button{
@@ -62,7 +77,11 @@ export const CardDetail = styled.div`
         width: 110px;
         margin-top: 20px;
         
-        @media (max-width: 480px) {
+        @media (min-width: 320px) and (max-width: 480px) {
+            margin-top: 50px;
+        }
+
+        @media (min-width: 481px) and (max-width: 768px) {
             margin-top: 50px;
         }
         

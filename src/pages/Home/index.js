@@ -24,8 +24,8 @@ export default function Home(){
         async function loadMovies(){
            const results = await apiMovie.get('sort_by=popularity.desc&page=1') 
            setMovies(results.data.results)
-           console.log(results.data.results)
         }
+        
         async function loadGenres(){
             const results = await apiGenres.get('language=pt-BR')
             setGenres(results.data.genres)

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+//------------------------------------------------------//
+
 export const Container = styled.div`
     height: 100vh;
     min-width: 85%;
@@ -11,10 +13,12 @@ export const Container = styled.div`
     justify-content: center;
     z-index: 0;
     display: flex;
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
         display: none;
     }
 `;
+
+//------------------------------------------------------//
 
 export const MenuMobile = styled.div`
     height: 100%;
@@ -36,8 +40,7 @@ export const MenuMobile = styled.div`
         svg{
             height: 45px;
             width: 45px;
-            color: white;
-            background-color: red;
+            background-color: rgba(255, 86, 86, 0.9);
             padding: 5px;
         }
     }

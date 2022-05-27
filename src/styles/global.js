@@ -1,6 +1,7 @@
 import {createGlobalStyle} from 'styled-components'
 import logan_bg from '../assets/logan-wolverine-art_1580587435.jpg'
 
+//------------------------------------------------------//
 
 export default createGlobalStyle`
     *{
