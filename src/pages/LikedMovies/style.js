@@ -22,6 +22,11 @@ export const Container = styled.div`
             margin-left: 5px;
             font-size: 0.9em;
         }
+
+        @media (min-width: 481px) and (max-width: 1024px) {
+            margin-left: 20px;
+            font-size: 0.9em;
+        }
     }
     
 
