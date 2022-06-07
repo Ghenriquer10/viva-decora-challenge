@@ -9,9 +9,8 @@ A empresa Viva Decora lançou um desafio front-end (https://github.com/vivadecor
 ### Caso queira executa-lo em seu computador faça o clone desse repositório e abra-o no visual studio, após isso execute o npm i no terminal de comando para instar o pacote de dependências. Por ultimo execute o projeto com npm start ou yarn start.
 
 ### Tecs usadas: 
-React.js:
 
-useState, useEffect, context-api, axios, react-toastfy, react-spring, react-router-dom, react-icons
+React.js - (useState, useEffect, context-api, axios, react-toastfy, react-spring, react-router-dom, react-icons, styled-components)
 
 Persisti os filmes curtidos pelo usuário no Local Storage
 
